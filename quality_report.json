@@ -1,0 +1,157 @@
+{
+  "requested_start": "2023-01-01",
+  "end": "2026-10-26",
+  "trading_dates": 921,
+  "master_stocks": 3486,
+  "listed_stocks": 3194,
+  "delisted_stocks": 292,
+  "delisted_missing_date": 0,
+  "missing_sw_l1": 3486,
+  "yearly": [
+    {
+      "year": 2023,
+      "rows": 769678,
+      "stocks": 3231,
+      "min_date": "2023-01-03",
+      "max_date": "2023-12-29",
+      "files": [
+        "stock_daily_2023_part01.parquet",
+        "stock_daily_2023_part02_sub01.parquet",
+        "stock_daily_2023_part02_sub02.parquet",
+        "stock_daily_2023_part02_sub03.parquet"
+      ]
+    },
+    {
+      "year": 2024,
+      "rows": 769001,
+      "stocks": 3218,
+      "min_date": "2024-01-02",
+      "max_date": "2024-12-31",
+      "files": [
+        "stock_daily_2024_part01.parquet",
+        "stock_daily_2024_part02.parquet"
+      ]
+    },
+    {
+      "year": 2025,
+      "rows": 770721,
+      "stocks": 3213,
+      "min_date": "2025-01-02",
+      "max_date": "2025-12-31",
+      "files": [
+        "stock_daily_2025_part01.parquet",
+        "stock_daily_2025_part02_sub01.parquet",
+        "stock_daily_2025_part02_sub02.parquet",
+        "stock_daily_2025_part02_sub03.parquet"
+      ]
+    },
+    {
+      "year": 2026,
+      "rows": 618242,
+      "stocks": 3211,
+      "min_date": "2026-01-05",
+      "max_date": "2026-10-26",
+      "files": [
+        "stock_daily_2026_part01.parquet",
+        "stock_daily_2026_part02.parquet"
+      ]
+    }
+  ],
+  "daily_rows": 2927642,
+  "rows_removed": {
+    "zero_volume_or_invalid_price": 5,
+    "outside_listing_period": 0
+  },
+  "source_ohlc_anomalies": 0,
+  "nulls": {
+    "missing_adj_factor": 0,
+    "missing_turnover": 1,
+    "missing_float_mv": 1,
+    "missing_up_limit": 4,
+    "missing_down_limit": 4,
+    "missing_is_st": 0
+  },
+  "index_rows": {
+    "000300.SH": 921,
+    "000985.SH": 848
+  },
+  "index_missing_dates": 73,
+  "source_documents": {
+    "reference_calendar_latest": {
+      "url": "https://meoz.cn/docs/query/calendar/latest",
+      "version": "1.0.48"
+    },
+    "reference_calendar_start-to-latest": {
+      "url": "https://meoz.cn/docs/query/calendar/start-to-latest",
+      "version": "1.0.48"
+    },
+    "reference_index_indexdaily": {
+      "url": "https://meoz.cn/docs/query/index/indexdaily",
+      "version": "1.0.48"
+    },
+    "reference_stock_adj-factor": {
+      "url": "https://meoz.cn/docs/query/stock/adj-factor",
+      "version": "1.0.48"
+    },
+    "reference_stock_basic": {
+      "url": "https://meoz.cn/docs/query/stock/basic",
+      "version": "1.0.48"
+    },
+    "reference_stock_daily": {
+      "url": "https://meoz.cn/docs/query/stock/daily",
+      "version": "1.0.48"
+    },
+    "reference_stock_pricelimit": {
+      "url": "https://meoz.cn/docs/query/stock/pricelimit",
+      "version": "1.0.48"
+    },
+    "reference_stock_st": {
+      "url": "https://meoz.cn/docs/query/stock/st",
+      "version": "1.0.48"
+    },
+    "reference_stock_stk-factor-pro": {
+      "url": "https://meoz.cn/docs/query/stock/stk-factor-pro",
+      "version": "1.0.48"
+    },
+    "reference_stock_suspend": {
+      "url": "https://meoz.cn/docs/query/stock/suspend",
+      "version": "1.0.48"
+    },
+    "reference_theme_industry": {
+      "url": "https://meoz.cn/docs/query/theme/industry",
+      "version": "1.0.48"
+    },
+    "reference_theme_members": {
+      "url": "https://meoz.cn/docs/query/theme/members",
+      "version": "1.0.48"
+    }
+  },
+  "notes": [
+    "申万官方分类页面和XLS下载连接失败，sw_l1未用其他行业体系替代。",
+    "历史日线name可能显示查询时的名称，不能用它推断历史ST。",
+    "已退市股票包含2023年以前退市的证券，其在请求区间内可没有日线记录。"
+  ],
+  "normalization": {
+    "up_limit_down_limit": "round to 2 decimal places to remove API float32 transport noise"
+  },
+  "upload_subdivisions": [
+    {
+      "superseded": "stock_daily_2023_part02.parquet",
+      "files": [
+        "stock_daily_2023_part02_sub01.parquet",
+        "stock_daily_2023_part02_sub02.parquet",
+        "stock_daily_2023_part02_sub03.parquet"
+      ],
+      "rows": 384839
+    },
+    {
+      "superseded": "stock_daily_2025_part02.parquet",
+      "files": [
+        "stock_daily_2025_part02_sub01.parquet",
+        "stock_daily_2025_part02_sub02.parquet",
+        "stock_daily_2025_part02_sub03.parquet"
+      ],
+      "rows": 385361
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "files_checked": 21,
+  "daily_rows": 2927642,
+  "unique_keys": true,
+  "calendar_dates": 921,
+  "stock_master_join_complete": true,
+  "delisted_dates_complete": true,
+  "cross_query_probe_rows": 484,
+  "cross_query_field_mismatches": {
+    "open": 0,
+    "high": 0,
+    "low": 0,
+    "close": 0,
+    "pre_close": 0,
+    "volume": 0,
+    "amount": 0,
+    "turnover": 0,
+    "float_mv": 0,
+    "adj_factor": 0
+  },
+  "caveats": [
+    "申万一级行业尚未获取；sw_l1为空。",
+    "中证全指缺73个交易日，详见缺口表。"
+  ],
+  "nulls": {
+    "missing_adj_factor": 0,
+    "missing_turnover": 1,
+    "missing_float_mv": 1,
+    "missing_up_limit": 4,
+    "missing_down_limit": 4,
+    "missing_is_st": 0
+  }
+}
